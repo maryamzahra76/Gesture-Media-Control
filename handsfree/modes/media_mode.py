@@ -97,6 +97,7 @@ def detect_gesture(lm):
 
 class MediaMode(BaseMode):
     name = "media"
+    voice_commands = ["play", "pause", "volume up", "volume down"]
 
     def __init__(self, screen_w, screen_h):
         super().__init__(screen_w, screen_h)
@@ -175,6 +176,18 @@ class MediaMode(BaseMode):
             status = self.swipe_text
 
         return status
+
+    def handle_voice(self, text):
+        if text in ("play", "pause"):
+            pyautogui.press("playpause")
+            return "Play/Pause"
+        if text == "volume up":
+            pyautogui.press("volumeup")
+            return "Volume Up"
+        if text == "volume down":
+            pyautogui.press("volumedown")
+            return "Volume Down"
+        return None
 
     def reset(self):
         self.history.clear()
