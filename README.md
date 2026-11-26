@@ -55,3 +55,11 @@ https://alphacephei.com/vosk/models and place the extracted folder inside a
             base.py          shared mode interface
             media_mode.py    Media Mode
     requirements.txt
+
+## Notes for the team
+
+- `main.py`, `voice.py` and `context.py` are copies of the shared team files,
+  included only so Media Mode can be run on its own. Do not edit them.
+- `handsfree/modes/__init__.py` is a temporary file for testing Media Mode
+  alone. Do not copy it into the team project.
+- Only `handsfree/modes/media_mode.py` needs to be copied into the team project.
