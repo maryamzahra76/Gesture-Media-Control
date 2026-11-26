@@ -1,5 +1,5 @@
 mediapipe==0.10.14
 opencv-python==5.0.0.93
 PyAutoGUI==0.9.54
-vosk
+vosk==0.3.45
 sounddevice==0.5.6
